@@ -55,3 +55,7 @@ Note: The AoU scripts are very similar to the UKB scripts except certain cohort 
 - 14_pubmed_search.ipynb: Pubmed search of discovered genes and relation to obesity
 - 15_supplementary_tables.ipynb: Supplementary table creation script
 - 16_pgs_interaction_schematic.ipynb: Stick and ball schematic of PGS interaction modes
+
+
+# Acknowledgements
+We thank the participants and investigators in the UK Biobank and All of US research studies who made this work possible. This research has been conducted using the UK Biobank Resource under Application Number 45023. We also thank the National Institutes of Health’s All of Us Research Program for making available the participant data examined in this study.
