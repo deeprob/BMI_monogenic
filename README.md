@@ -57,7 +57,7 @@ Note: The AoU scripts are very similar to the UKB scripts except certain cohort 
 - 16_pgs_interaction_schematic.ipynb: Stick and ball schematic of PGS interaction modes
 
 # Demo dataset
-Input data for scripts in src/ folder can be accessed by registering to UK Biobank or All of Us portal. The scripts are parallelized by chromosomes and chrm21 can be used as a demo dataset to test the scripts. The exome annotation scripts takes approximately 3 hours to run on a Jupyter Lab spark cluster instance in UK Biobank using 2 nodes with 48 cores each. For association testing using REGENIE, estimates for each step is available here: https://rgcgithub.github.io/regenie/recommendations/. All of Us time estimates are very similar to the UK Biobank.
+Input data for scripts in src/ folder can be accessed by registering to UK Biobank or All of Us portal. The scripts are parallelized by chromosomes and chrm21 can be used as a demo dataset to test the scripts. The exome annotation script for chmr 21 takes approximately 3 hours to run on a Jupyter Lab spark cluster instance in UK Biobank using 2 nodes with 48 cores each. For association testing using REGENIE, estimates for each step is available here: https://rgcgithub.github.io/regenie/recommendations/. All of Us time estimates are very similar to the UK Biobank.
 
 
 # System requirements and installation guide
