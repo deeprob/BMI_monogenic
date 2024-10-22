@@ -56,6 +56,17 @@ Note: The AoU scripts are very similar to the UKB scripts except certain cohort 
 - 15_supplementary_tables.ipynb: Supplementary table creation script
 - 16_pgs_interaction_schematic.ipynb: Stick and ball schematic of PGS interaction modes
 
+# Demo dataset
+Input data for scripts in src/ folder can be accessed by registering to UK Biobank or All of Us portal. The scripts are parallelized by chromosomes and chrm21 can be used as a demo dataset to test the scripts. The exome annotation scripts takes approximately 3 hours to run on a Jupyter Lab spark cluster instance in UK Biobank using 2 nodes with 48 cores each. For association testing using REGENIE, estimates for each step is available here: https://rgcgithub.github.io/regenie/recommendations/. All of Us time estimates are very similar to the UK Biobank.
+
+
+# System requirements and installation guide
+UK Biobank and All of Us both offer linux based cloud compute environment with most packages pre-installed. Python packages used in the source code such as statsmodels can be directly installed through pip. The first cell of each notebook contains a bash magic line to install packages that are not installed in the default jupyter environment provided by the respective cloud compute platform. It takes less than a minute to install these python packages. More details about the cloud compute platforms are available here:
+
+1. UK Biobank: https://dnanexus.gitbook.io/uk-biobank-rap
+2. All of Us: https://www.researchallofus.org/about-the-research-hub/
+
+
 
 # Acknowledgements
 We thank the participants and investigators in the UK Biobank and All of US research studies who made this work possible. This research has been conducted using the UK Biobank Resource under Application Number 45023. We also thank the National Institutes of Health’s All of Us Research Program for making available the participant data examined in this study.
