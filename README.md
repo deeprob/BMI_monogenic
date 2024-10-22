@@ -61,12 +61,12 @@ Input data for scripts in src/ folder can be accessed by registering to UK Bioba
 
 
 # System requirements and installation guide
-UK Biobank and All of Us both offer linux based cloud compute environment with most packages pre-installed. Python packages used in the source code such as statsmodels can be directly installed through pip. The first cell of each notebook contains a bash magic line to install packages that are not installed in the default jupyter environment provided by the respective cloud compute platform. It takes less than a minute to install these python packages. More details about the cloud compute platforms are available here:
+UK Biobank and All of Us both offer linux based cloud compute environment with most packages pre-installed. Python packages used in the source code which are not preinstalled, such as statsmodels, can be directly installed through pip. The first cell of each notebook contains a bash magic line to install packages that are not installed in the default jupyter environment provided by the respective cloud compute platform. It takes less than a minute to install these python packages. More details about the cloud compute platforms along with the version number of their installed packages is available here:
 
 1. UK Biobank: https://dnanexus.gitbook.io/uk-biobank-rap
 2. All of Us: https://www.researchallofus.org/about-the-research-hub/
 
-
+UK Biobank exome annotation, association testing and downstream analysis were performed in Jupyter Lab with Spark Cluster v2.2.0, Swiss Army Knife v4.12.0 and Jupyter Lab v2.3.0 respectively. All of Us data analysis was performed with Controlled Tier Dataset v7.
 
 # Acknowledgements
 We thank the participants and investigators in the UK Biobank and All of US research studies who made this work possible. This research has been conducted using the UK Biobank Resource under Application Number 45023. We also thank the National Institutes of Health’s All of Us Research Program for making available the participant data examined in this study.
