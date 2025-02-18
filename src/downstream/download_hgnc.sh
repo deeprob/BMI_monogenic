@@ -1,0 +1,1 @@
+wget https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/locus_groups/protein-coding_gene.txt -P /Users/deeprobanerjee/Documents/bmi_project/BMI_monogenic/data/hgnc

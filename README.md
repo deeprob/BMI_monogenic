@@ -1,11 +1,16 @@
 # Cross-ancestry analysis identifies genes associated with obesity risk and protection
-Codebase for manuscript titled "Cross-ancestry analysis identifies genes associated with obesity risk and protection";
+Codebase for manuscript titled "Cross-ancestry analysis identifies obesity associated genes";
 
 # Repository guidelines
 This repo contains step-by-step guide to the analysis carried out for the project. A description of each sub dir is as follows:
 
-1. src/: All biobank-specific preprocessing, variant annotation and association testing scripts are present here.
+1. src/: All biobank-specific preprocessing, data preparation, association testing and meta analysis scripts are present here.
 2. notebooks/: All downstream analysis scripts are present here.
+
+## src/downstream
+- 0_process_meta_files.py: Process meta analysis output genes to hgnc updated symbols
+- 1_conduct_meta_analysis.py: Inverse variance weighted meta analysis script
+
 
 ## src/exome_annot/ukb
 - 0_MT.ipynb: Converting the pVCF files to Hail Matrix Table format
