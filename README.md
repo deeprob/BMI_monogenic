@@ -1,4 +1,4 @@
-# Cross-ancestry analysis identifies genes associated with obesity risk and protection
+# Cross-ancestry analysis identifies obesity associated genes
 Codebase for manuscript titled "Cross-ancestry analysis identifies obesity associated genes";
 
 # Repository guidelines

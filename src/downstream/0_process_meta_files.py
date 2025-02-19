@@ -15,16 +15,18 @@ if __name__=="__main__":
     )
     analyses = ["all_ancestry", "lovo", "meds", "shadow_effect"]
     meta_classes = [meta.Meta, meta.Lovo, meta.Meds, meta.Meds]
+    phenotypes =[("bmi_rint", "bmi"), ("bmi_rint", ), ("bmi_rint", ), ("bmi_rint", )]
 
-    for analysis, meta_class  in zip(analyses, meta_classes):
+    for analysis, meta_class, phenos in zip(analyses, meta_classes, phenotypes):
         meta_class = meta_class()
         for biobank in ["aou", "ukb"]:
             for ancestry in ["afr", "amr", "eas", "eur", "sas", "mid"]:
-                filename = f"bmi_rint_{ancestry}_{biobank}_meta_w_samples.tsv.gz"
-                filepath = os.path.join(PROJECT_DIR, "data/meta/raw", analysis, filename)
-                meta_df = pd.read_csv(filepath, sep="\t")
-                processed_meta_df = meta_class.harmonize_gene_symbols_and_filter(meta_df, hgnc_df)
-                save_filename = f"bmi_rint_{ancestry}_{biobank}.tsv.gz"
-                save_filepath =  os.path.join(PROJECT_DIR, "data/meta/processed", analysis, save_filename)
-                os.makedirs(os.path.dirname(save_filepath), exist_ok=True)
-                processed_meta_df.to_csv(save_filepath, sep="\t", index=False)
+                for pheno in phenos:
+                    filename = f"{pheno}_{ancestry}_{biobank}_meta_w_samples.tsv.gz"
+                    filepath = os.path.join(PROJECT_DIR, "data/meta/raw", analysis, filename)
+                    meta_df = pd.read_csv(filepath, sep="\t")
+                    processed_meta_df = meta_class.harmonize_gene_symbols_and_filter(meta_df, hgnc_df)
+                    save_filename = f"{pheno}_{ancestry}_{biobank}.tsv.gz"
+                    save_filepath =  os.path.join(PROJECT_DIR, "data/meta/processed", analysis, save_filename)
+                    os.makedirs(os.path.dirname(save_filepath), exist_ok=True)
+                    processed_meta_df.to_csv(save_filepath, sep="\t", index=False)
