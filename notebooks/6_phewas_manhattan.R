@@ -10,10 +10,14 @@ for (gene in genes) {
   
   # Save the plot to a PDF
   save_file <- paste0(PROJECT_DIR, "/data/phewas/", gene, "/phewas_manhattan.pdf")
-  pdf(save_file, width = 6.5, height = 3.5)  # Adjust size as needed
-  print(phewasManhattan(
+  pdf(save_file, width = 3.25, height = 3)  # Adjust size as needed
+  p <- phewasManhattan(
     phe_df, annotate.phenotype.description = FALSE, 
-    point.size=1, title=paste0("Phewas: ", gene), size.x.labels=6, size.y.labels=6))
+    point.size = 1, title = paste0("Phewas: ", gene), 
+    size.x.labels = 7, size.y.labels = 7
+  )
+  
+  # Modify x-axis labels' angle and alignment
+  print(p + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)))
   dev.off()  # Close the PDF device
 }
-
