@@ -3,7 +3,7 @@
 notebook_path="notebooks/bmi/14a_proteomics_protein_assoc.ipynb"
 
 
-dx login --token gibDKw6atNkN08XvaofHEHg6uhkBAcru  
+dx login --token TOKEN  
 
 my_cmd="pip install openpyxl statsmodels scikit-learn && papermill 14a_proteomics_protein_assoc.ipynb 14a_proteomics_protein_assoc_out.ipynb"
 
